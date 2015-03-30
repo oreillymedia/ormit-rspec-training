@@ -7,12 +7,12 @@
 # and the set of anagrams containing the most words.
 
 module Anagram
-  @filename = 'wordlist-kata06.txt';
-  @words ||= File.readlines(@filename, :encoding => 'ISO-8859-1').collect { |line| line.chomp.downcase}
+  # @filename = 'wordlist-kata06.txt';
 
   # Set filename to be read
   def self.filename=(filename)
     @filename = filename
+    @words ||= File.readlines(@filename, :encoding => 'ISO-8859-1').collect { |line| line.chomp.downcase}
   end
 
   # Extract anagrams from an array of words
